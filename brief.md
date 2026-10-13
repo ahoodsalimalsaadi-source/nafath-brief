@@ -35,6 +35,8 @@ A Software Bill of Materials (SBOM) is a formal, structured inventory of softwar
 Resource: CISA Software Bill of Materials - https://www.cisa.gov/sbom
 
 ## Misconception in My Track
+A common misconception in software configuration management is that storing secrets in encrypted configuration files within the source code repository provides adequate security. While encryption protects data at rest against casual inspection, decryption keys often end up managed improperly or committed alongside ciphertext. The Twelve-Factor App methodology explicitly refutes this, stating that configuration should be stored in environment variables, which are completely decoupled from code storage. The Config section notes that apps sometimes store config as constants in code, violating the core tenet that code should not vary across deploys.
 
 
 ## Open Question
+How can organizations effectively automate SBOM generation and vulnerability ingestion across heterogeneous CI/CD pipelines without introducing severe build bottlenecks?
